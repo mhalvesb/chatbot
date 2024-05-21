@@ -42,29 +42,7 @@ export const LeftChat = styled.div`
     }
 `;
 
-export const RightChat = styled.div`
-    width: fit-content;
-    padding: 20px 25px 5px 15px;
-    margin-right: 20px;
-    margin-top: 20px;
-    background: #1F51FF;
-    border-radius: 20px;
-    margin-left: auto;
-    color: #fff;
 
-        h4{
-                margin: 0;
-                padding: 0;
-                font-weight: 500;
-        }
-
-
-        p{
-            margin: 10px 0px;
-            padding: 0;
-            font-size: 12px;
-        }
-`;
 
 
 export const InputChat = styled.div`
@@ -77,7 +55,12 @@ export const InputChat = styled.div`
     align-items: center;
     background: #555;
 
-
+    form{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+    }
     input{
         width: calc(100% - 60px);
         font-size: 14px;
@@ -93,10 +76,18 @@ export const InputChat = styled.div`
         border-radius: 10px;
     }
 
-    img{
+    button{
+        background-image: url("https://www.svgrepo.com/show/522268/send-email.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
         position: absolute;
+        padding: 0;
         right: 10px;
         width: 30px;
+        height: 30px;
         cursor: pointer;
     }
 `;
