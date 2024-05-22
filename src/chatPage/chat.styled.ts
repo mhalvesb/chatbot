@@ -7,6 +7,9 @@ export const MainPage = styled.div`
 width: 100vw;
 height: 100vh;
 background-color: #000;
+display: flex;
+align-items: center;
+justify-content: center;
 `;
 
 export const Container = styled.div`
@@ -14,10 +17,9 @@ export const Container = styled.div`
     height: 75vh;
     margin: auto;
     background-color: #f5f5f5;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
 `;
 
 
@@ -47,8 +49,9 @@ export const LeftChat = styled.div`
 
 export const InputChat = styled.div`
     width: calc(100% - 20px);
+    margin-top: auto;
     height: 40px;
-    position: absolute;
+    position: sticky;
     bottom: 0;
     padding: 10px 10px;
     display: flex;
