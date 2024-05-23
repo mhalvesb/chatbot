@@ -1,29 +1,47 @@
 import {Container, InputChat, LeftChat, MainPage} from "./chat.styled";
 import {RightChatting} from "../components/RightChat";
 import React, {useState, useEffect, useRef} from "react";
+import {createRoot} from "react-dom/client";
+import {createPortal} from "react-dom";
+import date from "date-and-time";
+import pt from "date-and-time/locale/pt";
 
 export function ChatBot(){
 
-    const [message, setMessage] = useState<string[]>([]);
+    const [message, setMessage] = useState("");
+    const [addComponent, setComponent] = useState<JSX.Element[]>([]);
     const [actualMessage, setActualMessage] = useState("");
-    const containerRef = useRef<HTMLDivElement>(null);
-    function AddNewMessage(e: React.FormEvent<HTMLFormElement>){
+    const [messageTime, setMessageTime] = useState<string>("");
+    const containerRef = useRef<HTMLDivElement | null>(null);
+    async function AddNewMessage (e: React.FormEvent<HTMLFormElement>){
         e.preventDefault();
-        setMessage(prevMessages => [...prevMessages, actualMessage]);
-        setActualMessage("");
+         setMessage(actualMessage);
+         const time = new Date();
+         date.locale(pt);
+        const messageDate = date.format(time, "DD de MMMM H:mm");
+        setMessageTime(messageDate);
         
+        setActualMessage("");
+    
     }
+
+    
 
     function debbugingInput(e: React.ChangeEvent<HTMLInputElement>){
         setActualMessage(e.target.value);
     }
+
+   
 
 
     useEffect(() =>{
             if(containerRef.current){
                 containerRef.current.scrollTop = containerRef.current.scrollHeight;
             }
-    }, [message])
+            if(message){
+                setComponent(prevComponent => [...prevComponent, <RightChatting msg={message} dateAndTime={messageTime}/>]);
+            }
+    }, [message, messageTime]);
     return(
         <MainPage>
             <Container ref={containerRef}>
@@ -32,10 +50,8 @@ export function ChatBot(){
                 <p>21 de Maio as 18:16</p>
             </LeftChat>
             
-            {message.map((msg, index) =>{
-                return <RightChatting msg={msg} key={index}/>
-            })}
-
+            
+            {addComponent}
             
                 <InputChat>
                     <form onSubmit={(e) => AddNewMessage(e)}>
