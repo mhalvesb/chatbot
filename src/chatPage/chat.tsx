@@ -8,7 +8,6 @@ import Axios from "axios";
 export function ChatBot(){
 
     const [message, setMessage] = useState("");
-    const [responses, setResponses] = useState("");
     const [allChatComponents, setAllComponents] = useState<JSX.Element[]>([]);
     const [actualMessage, setActualMessage] = useState("");
     const [messageTime, setMessageTime] = useState<string>("");
