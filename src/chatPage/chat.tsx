@@ -37,7 +37,7 @@ export function ChatBot(){
                 setAllComponents(prevComponent => [...prevComponent, <RightChatting msg={message} dateAndTime={messageTime}/>]);
                 const fetchResponse = async () =>{
                     try{
-                        const response = await Axios.post("http://localhost:8080/", {
+                        const response = await Axios.post("hhttps://iaforchat.vercel.app/", {
                         message: message
                         });
                         setAllComponents(prevLeftComponent => [...prevLeftComponent, <LeftChatting responses={response.data.data} dateAndTime={messageTime}/>]);
