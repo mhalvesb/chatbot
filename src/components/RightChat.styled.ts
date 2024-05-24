@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const RightChat = styled.div`
     width: fit-content;
-    padding: 20px 25px 5px 15px;
+    padding: 20px 20px 10px 10px;
     margin-right: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -15,7 +15,7 @@ export const RightChat = styled.div`
         h4{
                 margin: 0;
                 padding: 0;
-                font-weight: 500;
+                font-weight: 400;
         }
 
 
@@ -23,6 +23,7 @@ export const RightChat = styled.div`
             margin: 10px 0px;
             padding: 0;
             font-size: 12px;
+            font-weight: 100;
         }
 
         

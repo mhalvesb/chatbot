@@ -37,9 +37,7 @@ export function ChatBot(){
 
 
     useEffect(() =>{
-            if(containerRef.current){
-                containerRef.current.scrollTop = containerRef.current.scrollHeight;
-            }
+            
             if(message){
                 setAllComponents(prevComponent => [...prevComponent, <RightChatting msg={message} dateAndTime={messageTime}/>]);
                 const fetchResponse = async () =>{
@@ -48,7 +46,6 @@ export function ChatBot(){
                         message: message
                         });
                         setAllComponents(prevLeftComponent => [...prevLeftComponent, <LeftChatting responses={response.data.data} dateAndTime={messageTime}/>]);
-                        
                     } catch(error){
                     }
                 }
@@ -56,8 +53,17 @@ export function ChatBot(){
             console.log(allChatComponents);
             }
     }, [message, messageTime]);
+
+    useEffect(() =>{
+        if(containerRef.current){
+            containerRef.current.scrollTop = containerRef.current.scrollHeight;
+            console.log("ok");
+        }
+    }, [allChatComponents])
     return(
         <MainPage>
+            <header><p>Talk to A.I</p>
+            <hr></hr></header>
             <Container ref={containerRef}>
             
                 {allChatComponents}
@@ -65,7 +71,7 @@ export function ChatBot(){
                 <InputChat>
                     <form onSubmit={(e) => AddNewMessage(e)}>
                         <input type="text" placeholder="Type a message" value={actualMessage} onChange={(e) => debbugingInput(e)}></input>
-                        <button type="submit"></button>
+                        <button type="submit">Enviar</button>
                     </form>
                 </InputChat>
             </Container>

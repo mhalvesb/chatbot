@@ -6,20 +6,63 @@ import styled from "styled-components";
 export const MainPage = styled.div`
 width: 100vw;
 height: 100vh;
-background-color: #000;
+background-color: #383a45;
 display: flex;
+flex-direction: column;
 align-items: center;
 justify-content: center;
+
+
+
+    header{
+        background-color: #20222c;
+        color: #fff;
+        width: 75vw;
+        text-align: center;
+        height: 100px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 50px;
+        margin-top: 50px;
+    }
+
+    p{
+        margin: 0;
+        padding: 0;
+    }
+
+    hr{
+        width: calc(95% - 20px);
+        border: 1px solid #767a88;
+        z-index: 2;
+        margin: 0;
+        padding: 0;
+    }
 `;
 
 export const Container = styled.div`
     width: 75vw;
     height: 75vh;
-    margin: auto;
-    background-color: #f5f5f5;
+    border-radius: 0px 0px 10px 10px;
+    
+    background-color: #20222c;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
+
+    
+    &::-webkit-scrollbar {
+    background: #767a88;   
+    width: 8px;
+    border-radius: 0px 0px 10px 0px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: #212444; 
+        border-radius: 20px;
+    }
 `;
 
 
@@ -29,15 +72,18 @@ export const Container = styled.div`
 
 
 export const InputChat = styled.div`
-    width: calc(100% - 20px);
+    width: calc(95% - 20px);
+    border-radius: 20px;
+    margin: auto;
     margin-top: auto;
+    margin-bottom: 20px;
     height: 40px;
     position: sticky;
     bottom: 0;
     padding: 10px 10px;
     display: flex;
     align-items: center;
-    background: #555;
+    background: #161823;
 
     form{
         width: 100%;
@@ -56,22 +102,18 @@ export const InputChat = styled.div`
         margin: 0;
         border: 0;
         outline: none;
-        background-color: #888;
+        background-color: #161823;
         border-radius: 10px;
     }
 
     button{
-        background-image: url("https://www.svgrepo.com/show/522268/send-email.svg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: transparent;
+        background: #1F51FF;
         border: none;
-        position: absolute;
         padding: 0;
-        right: 10px;
-        width: 30px;
-        height: 30px;
+        width: 80px;
+        height: 40px;
+        color: #fff;
+        border-radius: 5px;
         cursor: pointer;
     }
 `;

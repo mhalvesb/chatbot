@@ -1,5 +1,5 @@
 import { LeftChat } from "./LeftChat.styled"
-
+import ReactMarkdown from "react-markdown";
 
 interface LeftProps{
     responses: string;
@@ -7,9 +7,14 @@ interface LeftProps{
 }
 
 export function LeftChatting(props: LeftProps){
+
+
+
+
     return(
         <LeftChat>
-            <h4>{props.responses}</h4>
+            <ReactMarkdown>{props.responses}</ReactMarkdown>
+            
             <p>21 de Maio as 18:16</p>
         </LeftChat>
     )
