@@ -2,8 +2,6 @@ import {Container, InputChat, MainPage} from "./chat.styled";
 import {RightChatting} from "../components/RightChat";
 import {LeftChatting} from "../components/leftChat/LeftChat";
 import React, {useState, useEffect, useRef} from "react";
-import {createRoot} from "react-dom/client";
-import {createPortal} from "react-dom";
 import date from "date-and-time";
 import pt from "date-and-time/locale/pt";
 import Axios from "axios";
@@ -11,8 +9,6 @@ export function ChatBot(){
 
     const [message, setMessage] = useState("");
     const [responses, setResponses] = useState("");
-    const [addComponentRight, setComponentRight] = useState<JSX.Element[]>([]);
-    const [addComponentLeft, setComponentLeft] = useState<JSX.Element[]>([]);
     const [allChatComponents, setAllComponents] = useState<JSX.Element[]>([]);
     const [actualMessage, setActualMessage] = useState("");
     const [messageTime, setMessageTime] = useState<string>("");
