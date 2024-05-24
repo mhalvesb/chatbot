@@ -14,8 +14,8 @@ export function LeftChatting(props: LeftProps){
     return(
         <LeftChat>
             <ReactMarkdown>{props.responses}</ReactMarkdown>
+            <span>{props.dateAndTime}</span>
             
-            <p>21 de Maio as 18:16</p>
         </LeftChat>
     )
 }
