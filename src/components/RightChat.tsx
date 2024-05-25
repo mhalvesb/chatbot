@@ -10,7 +10,7 @@ export function RightChatting(props: ChatProps){
     return(
         <RightChat>
             <h4>{props.msg}</h4>
-            <p>{props.dateAndTime}</p>
+            <span>{props.dateAndTime}</span>
         </RightChat>
     )
 }

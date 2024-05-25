@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const LeftChat = styled.div`
     width: fit-content;
-    max-width: 50%;
+    max-width: calc(50% - 40px);
     padding: 20px 25px 5px 15px;
     margin-left: 20px;
     margin-top: 10px;

@@ -27,6 +27,14 @@ justify-content: center;
         flex-direction: column;
         font-size: 50px;
         margin-top: 50px;
+
+        @media(max-width: 800px){
+        width: 90vw;
+        }
+        @media (max-width: 500px){
+        width: 100vw;
+        margin-top: 0px;
+    }
     }
 
     p{
@@ -50,6 +58,7 @@ export const Container = styled.div`
     
     background-color: #20222c;
     overflow-y: scroll;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
 
@@ -62,6 +71,15 @@ export const Container = styled.div`
     &::-webkit-scrollbar-thumb{
         background: #212444; 
         border-radius: 20px;
+    }
+
+    @media (max-width: 800px){
+        width: 90vw;
+    }
+
+    @media (max-width: 500px){
+        width: 100vw;
+        height: 100vh;
     }
 `;
 
@@ -117,3 +135,6 @@ export const InputChat = styled.div`
         cursor: pointer;
     }
 `;
+
+
+
