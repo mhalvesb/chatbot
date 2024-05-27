@@ -7,7 +7,6 @@ import pt from "date-and-time/locale/pt";
 import Axios from "axios";
 export function ChatBot(){
     const [message, setMessage] = useState("");
-    const [firstMessage, setFirstMessage] = useState<number>(0);
     const [allChatComponents, setAllComponents] = useState<JSX.Element[]>([]);
     const [actualMessage, setActualMessage] = useState("");
     const [messageTime, setMessageTime] = useState<string>("");
