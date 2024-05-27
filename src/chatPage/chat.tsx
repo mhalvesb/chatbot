@@ -6,8 +6,8 @@ import date from "date-and-time";
 import pt from "date-and-time/locale/pt";
 import Axios from "axios";
 export function ChatBot(){
-
     const [message, setMessage] = useState("");
+    const [firstMessage, setFirstMessage] = useState<number>(0);
     const [allChatComponents, setAllComponents] = useState<JSX.Element[]>([]);
     const [actualMessage, setActualMessage] = useState("");
     const [messageTime, setMessageTime] = useState<string>("");
@@ -32,34 +32,32 @@ export function ChatBot(){
 
 
     useEffect(() =>{
-            
             if(message){
                 setAllComponents(prevComponent => [...prevComponent, <RightChatting msg={message} dateAndTime={messageTime}/>]);
                 const fetchResponse = async () =>{
                     try{
-                        const response = await Axios.post("https://iaforchat.vercel.app", {
-                        message: message
+                        const response = await Axios.post("http://localhost:8080", {
+                            message: message
                         }, {headers: {
                             'Content-Type': 'application/json',
                           }});
                         setAllComponents(prevLeftComponent => [...prevLeftComponent, <LeftChatting responses={response.data.data} dateAndTime={messageTime}/>]);
                     } catch(error){
+
                     }
                 }
             fetchResponse();
-            console.log(allChatComponents);
             }
     }, [message, messageTime]);
 
     useEffect(() =>{
         if(containerRef.current){
             containerRef.current.scrollTop = containerRef.current.scrollHeight;
-            console.log("ok");
         }
-    }, [allChatComponents])
+    }, [allChatComponents]);
     return(
         <MainPage>
-            <header><p>Talk to A.I</p>
+            <header><p>Loja de Pets</p>
             <hr></hr></header>
             <Container ref={containerRef}>
             
