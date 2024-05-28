@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+## ChatBot para loja de produtos para animais
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h3>⭐ ChatBot implementado com I.A Gemini da Google</h3>
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<ul><li>Status: Concluído ✅</li></ul>
+<hr>
 
-## Expanding the ESLint configuration
+<h3>📃 Descrição do Projeto</h3>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<ul>
+  <li>Projeto com intuito de implementar uma inteligencia artificial personalizada para prestar serviços como assistente virtual de Ecommerce</li>
+  <li>I.A implementada com prompt personalizado podendo ser alterado para qualquer tipo de objetivo</li>
+</ul>
+<hr>
+<h3>Tecnologias utilizadas</h3>
+<ul>
+  <li>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="20"/> <strong>Typescript</strong>
+  </li>
+  <li>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" width="20"/> <strong>React</strong>
+  </li>
+  <li>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" width="20"/> <strong>ViteJS</strong>
+  </li>
+  <li>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" width="20"/> <strong>NodeJS</strong>
+  </li>
+</ul>
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<h3>Imagens do projeto</h3>
+<img src=""/>
+<img src=""/>
