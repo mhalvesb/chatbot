@@ -13,7 +13,7 @@
   <li>I.A implementada com prompt personalizado podendo ser alterado para qualquer tipo de objetivo</li>
 </ul>
 <hr>
-<h3>Tecnologias utilizadas</h3>
+<h3>📚 Tecnologias utilizadas</h3>
 <ul>
   <li>
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="20"/> <strong>Typescript</strong>
@@ -30,6 +30,6 @@
 </ul>
 
 
-<h3>Imagens do projeto</h3>
+<h3>📷 Imagens do projeto</h3>
 <img src="./src/assets/githubimg/imagem1.jpg"/>
 <img src="./src/assets/githubimg/imagem2.jpg"/>
